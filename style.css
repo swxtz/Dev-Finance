@@ -196,8 +196,29 @@ td.expense {
 .modal {
     background-color: var(--background-color-modal);
     padding: 2.4rem;
+    max-width: 500px;
     
 }
+
+/* Form ============================ */
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+#form form input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: .8rem;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
 /* Footer ========================== */
 footer {
     margin: 5rem 0 2rem;
