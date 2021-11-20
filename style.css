@@ -1,13 +1,13 @@
 /* Global ============================ */
-:root{
+
+:root {
     --color-gray-cards: #363f5f;
     --color-button-transaction-hover: #3DD705;
     --color-button-transaction: #46aa26;
     --background-color-modal: #f0f2f5;
-    --color-white:#ffffff;
+    --color-white: #ffffff;
     --color-green: #49AA26;
     --red: #e92929;
-    
 }
 
 * {
@@ -22,39 +22,43 @@ body {
 }
 
 html {
-    font-size: 93.75%;  /* 15 px */
+    font-size: 93.75%;
+    /* 15 px */
 }
 
-.sr-only { /*Esse Codico mantem visivel para pessoal com deficiencia */ 
+.sr-only {
+    /*Esse Codico mantem visivel para pessoal com deficiencia */
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0,);
+    clip: rect(0, 0, 0, 0, );
     white-space: nowrap;
     border-width: 0;
 }
 
 .container {
-    width: min(90vw,  800px);
-
+    width: min(90vw, 800px);
     margin: auto;
 }
 
+
 /* Titles ========================== */
+
 h2 {
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
     color: var(--color-gray-cards);
-
     font-weight: normal;
     text-align: center;
 }
 
+
 /* Links e Buttuns ================= */
-a{
+
+a {
     color: var(--color-button-transaction);
     text-decoration: none;
 }
@@ -79,13 +83,14 @@ button {
     border-radius: 0.25rem;
     cursor: pointer;
 }
+
 button:hover {
     background: var(--color-button-transaction-hover);
 }
 
 .button.cancel {
-    color:var(--red) ;
-    border: 2px var(--red) solid; 
+    color: var(--red);
+    border: 2px var(--red) solid;
     border-radius: 0.25rem;
     width: 50px;
     height: 50px;
@@ -94,10 +99,14 @@ button:hover {
     justify-content: center;
     opacity: 0.6;
 }
-.button.cancel:hover{
+
+.button.cancel:hover {
     opacity: 1;
 }
+
+
 /* Header ========================== */
+
 header {
     background: #2D4A22;
     padding: 2rem 0 10rem;
@@ -109,30 +118,33 @@ header {
     font-weight: 100;
 }
 
+
 /* Balance ========================== */
-#Balance { 
+
+#Balance {
     margin-top: -8rem;
 }
 
-#Balance h2 {  /*Não coloca como variavel / leitor de tela*/
+#Balance h2 {
+    /*Não coloca como variavel / leitor de tela*/
     color: #fff;
     margin-top: 0;
 }
 
+
 /* Cards ========================== */
+
 .card {
     background: #fff;
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
-
     color: var(--color-gray-cards);
 }
 
 .card h3 {
     font-weight: normal;
     font-size: 1rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,7 +157,7 @@ header {
     margin-bottom: 1rem;
 }
 
-.card.total  {
+.card.total {
     background: var(--color-green);
     color: #fff
 }
@@ -156,7 +168,9 @@ header {
     overflow-x: auto;
 }
 
+
 /* Table ========================== */
+
 #data-table {
     width: 100%;
     border-spacing: 0 0.15rem;
@@ -173,15 +187,14 @@ table tbody tr:hover {
 }
 
 table td {
-    background: #fff ;
+    background: #fff;
     border-radius: 0.30rem;
-    text-align: left;  
+    text-align: left;
     padding: 1rem 2rem;
 }
 
 table th {
     background: #fAfAfA;
- 
     color: #969cb3;
     font-weight: normal;
     text-align: left;
@@ -191,7 +204,7 @@ table th {
 }
 
 td.descripition {
-     color: var(--color-gray-cards);
+    color: var(--color-gray-cards);
 }
 
 td.income {
@@ -201,18 +214,19 @@ td.income {
 td.expense {
     color: #e92929;
 }
+
+
 /* Modal ========================== */
+
 .modal-overlay {
     width: 100%;
     height: 100%;
-
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
     opacity: 0;
     visibility: hidden;
 }
@@ -220,8 +234,6 @@ td.expense {
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
-
-
 }
 
 .modal {
@@ -229,10 +241,11 @@ td.expense {
     padding: 2.4rem;
     max-width: 500px;
     /* max-height: 380px; */
-    
 }
 
+
 /* Form ============================ */
+
 #form {
     max-width: 500px;
 }
@@ -261,26 +274,30 @@ td.expense {
     justify-content: space-between;
     align-items: center;
 }
-.input-group.actions .button, 
-.input-group.actions button{
+
+.input-group.actions .button,
+.input-group.actions button {
     width: 48%;
 }
 
 
 /* Footer ========================== */
+
 footer {
     margin: 5rem 0 2rem;
     text-align: center;
     color: var(--color-gray-cards);
-    opacity: 0.6;   
+    opacity: 0.6;
 }
 
+
 /* Reponsive */
-@media (min-width: 800px ) { /* 14px */
+
+@media (min-width: 800px) {
+    /* 14px */
     html {
         font-size: 87.5%;
-    }      
-
+    }
     #Balance {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

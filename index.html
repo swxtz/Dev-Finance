@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
 <!-- Corpo -->
@@ -32,7 +30,8 @@
             <div class="card">
                 <h3>
                     <span>Entradas</span>
-                    <img src="./assets/income.svg" alt="Imagem de Entrada"> <!-- Audio escrição + Imagem -->
+                    <img src="./assets/income.svg" alt="Imagem de Entrada">
+                    <!-- Audio escrição + Imagem -->
 
                 </h3>
                 <p>R$5.000.00</p>
@@ -41,7 +40,8 @@
             <div class="card">
                 <h3>
                     <span>Saídas</span>
-                    <img src="./assets/expense.svg" alt="Imagem de Saida"> <!-- Audio escrição + Imagem -->
+                    <img src="./assets/expense.svg" alt="Imagem de Saida">
+                    <!-- Audio escrição + Imagem -->
 
                 </h3>
 
@@ -51,7 +51,8 @@
             <div class="card total">
                 <h3>
                     <span>Total</span>
-                    <img src="./assets/total.svg" alt="Imagem do total"> <!-- Audio escrição + Imagem -->
+                    <img src="./assets/total.svg" alt="Imagem do total">
+                    <!-- Audio escrição + Imagem -->
 
                 </h3>
 
@@ -65,7 +66,7 @@
         <section id="transaction">
             <h2 class="sr-only">Transações </h2>
 
-            <a href="#" class="button new">+ Nova Transação</a>
+            <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
 
             <!-- Tabela das Trasações -->
 
@@ -110,8 +111,8 @@
 
         <!-- Rodapé -->
     </main>
-
-    <div class="modal-overlay active">
+    <!--active -->
+    <div class="modal-overlay ">
         <div class="modal">
             <div id="form">
                 <h2>Nova Transação</h2>
@@ -143,12 +144,25 @@
                             </div>
 
                 </form>
+                </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <footer>
-        <p>©My Imports LTDA</p>
-    </footer>
+            <footer>
+                <p>©My Imports LTDA</p>
+            </footer>
 
+            <script>
+                Modal = {
+                    open() {
+                        // Abrir modal
+                        // Adicionar a classe para ao modal
+                        alert('Abri o modal')
+                    },
+                    close() {
+                        //fechar o modal
+                        //remover a classe active do modal
+                    }
+                }
+            </script>
 </body>
