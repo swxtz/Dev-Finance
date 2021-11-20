@@ -240,7 +240,7 @@ td.expense {
     background-color: var(--background-color-modal);
     padding: 2.4rem;
     max-width: 500px;
-    /* max-height: 380px; */
+    max-height: 380px;
 }
 
 
