@@ -5,6 +5,7 @@
     --color-button-transaction: #46aa26;
     --background-color-modal: #f0f2f5;
     --color-white:#ffffff;
+    --color-green: #49AA26;
     
 }
 
@@ -15,7 +16,7 @@
 }
 
 body {
-    background: #f0f2f5;
+    background: var(--background-color-modal);
     font-family: 'poppins', sans-serif;
 }
 
@@ -45,7 +46,7 @@ html {
 h2 {
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
-    color: #363f5f;
+    color: var(--color-gray-cards);
 
     font-weight: normal;
     text-align: center;
@@ -72,6 +73,7 @@ button {
     height: 50px;
     border: none;
     color: var(--color-white)
+
 }
 
 /* Header ========================== */
@@ -123,7 +125,7 @@ header {
 }
 
 .card.total  {
-    background: #49AA26;
+    background: var(--color-green);
     color: #fff
 }
 
