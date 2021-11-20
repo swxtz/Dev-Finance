@@ -16,3 +16,7 @@ const Modal = {
             .remove('active')
     }
 }
+
+const Trassaction = {
+
+}
