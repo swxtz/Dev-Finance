@@ -153,11 +153,13 @@
             </footer>
 
             <script>
-                Modal = {
+                const Modal = {
                     open() {
                         // Abrir modal
                         // Adicionar a classe para ao modal
-                        alert('Abri o modal')
+                        document
+                            .querySelector('.modal-overlay')
+                            .classList.add('active')
                     },
                     close() {
                         //fechar o modal
