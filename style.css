@@ -186,6 +186,12 @@ td.expense {
     visibility: hidden;
 }
 
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+
+
+}
 
 .modal {
     background-color: var(--background-color-modal);
