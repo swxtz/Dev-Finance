@@ -17,6 +17,36 @@ const Modal = {
     }
 }
 
-const Trassaction = {
+const transactions = [{
+        id: 1,
+        description: 'Luz',
+        amount: -50000,
+        date: '23/04/2021'
+    },
+    {
+        id: 2,
+        description: 'Trabalho',
+        amount: 50000,
+        date: '17/04/2021'
+    },
+    {
+        id: 3,
+        description: 'Aluguel',
+        amount: -12000,
+        date: '20/04/2021'
+    },
+]
+
+
+const Transaction = {
+    incomes() {
+        //Somar as entradas
+    },
+    expenses() {
+        //Somar as saidas
+    },
+    total() {
+        //Entradas - Saidas
+    }
 
 }
