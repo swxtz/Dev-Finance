@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Imports Finance's</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+<!-- Corpo -->
+
+<body>
+
+
+    <header>
+        <h1><img src="./assets/logo.svg" alt="Logo My Imports Finance"></h1>
+    </header>
+    <main class="container">
+
+        <section id="Balance">
+
+            <h2 class="sr-only">Balanço</h2>
+
+            <div class="card">
+                <h3>
+                    <span>Entradas</span>
+                    <img src="./assets/income.svg" alt="Imagem de Entrada"> <!-- Audio escrição + Imagem -->
+
+                </h3>
+                <p>R$5.000.00</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span>Saídas</span>
+                    <img src="./assets/expense.svg" alt="Imagem de Saida"> <!-- Audio escrição + Imagem -->
+
+                </h3>
+
+                <p>R$2.000.00</p>
+            </div>
+
+            <div class="card total">
+                <h3>
+                    <span>Total</span>
+                    <img src="./assets/total.svg" alt="Imagem do total"> <!-- Audio escrição + Imagem -->
+
+                </h3>
+
+                <p>R$2.000.00</p>
+            </div>
+
+        </section>
+
+        <!-- Sessão  -->
+
+        <section id="transaction">
+            <h2 class="sr-only">Transações </h2>
+
+            <a href="#" class="button new">+ Nova Transação</a>
+
+            <!-- Tabela das Trasações -->
+
+            <table id=data-table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="descripition">Luz</td>
+                        <td class="expense">-500,00</td>
+                        <td class="date">23/04/2021</td>
+                        <td>
+                            <img src="./assets/minus.svg" alt="Remover Transação">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="descripition">trabalho</td>
+                        <td class="income">5000,00</td>
+                        <td class="date">17/04/2021</td>
+                        <td>
+                            <img src="./assets/minus.svg" alt="Remover Transação">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="descripition">Aluguel</td>
+                        <td class="expense">-1200,00</td>
+                        <td class="date">20/04/2021</td>
+                        <td>
+                            <img src="./assets/minus.svg" alt="Remover Transação">
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+
+        <!-- Rodapé -->
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-content">
+                 Oi
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>©My Imports LTDA</p>
+    </footer>
+
+</body>
