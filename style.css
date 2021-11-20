@@ -3,6 +3,7 @@
     --color-gray-cards: #363f5f;
     --color-button-transaction-hover: #3DD705;
     --color-button-transaction: #46aa26;
+    --background-color-modal: #f0f2f5;
     
 }
 
@@ -176,8 +177,13 @@ td.expense {
 
     background-color: rgba(0,0,0,0.7);
     position: fixed;
+    top: 0;
 }
 
+
+.modal {
+    background-color: var(--background-color-modal)
+}
 /* Footer ========================== */
 footer {
     margin: 5rem 0 2rem;
