@@ -65,12 +65,14 @@ const DOM = {
 
         DOM.transactionsContainer.appendChild(tr)
 
-        console.log(tr.innerHTML)
+        // console.log(tr.innerHTML)
     },
 
 
     innerHTMLTransaction(transactions) {
         const CSSclasses = transactions.amount > 0 ? "income" : "expense"
+
+        const amount = Utils.fotmatCurrency(transactions.amount)
 
         const html = `
         <td class="descripition">${transactions.description}</td>
@@ -86,6 +88,13 @@ const DOM = {
 
     }
 
+}
+
+const Utils = {
+    fotmatCurrency(Value) {
+        const signal = Number(Value) < 0 ? "-" : ""
+
+    }
 }
 
 transactions.forEach(function(Transaction) {
