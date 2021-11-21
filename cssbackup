@@ -16,6 +16,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background: var(--background-color-modal);
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+    font-size: 93.75%;
+    /* 15 px */
 }
 
 .sr-only {
