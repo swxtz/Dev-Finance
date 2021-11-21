@@ -1,9 +1,12 @@
-/* Global ===================== */
+/* Global ============================ */
 
 :root {
-    --dark-blue: #363f5f;
-    --green: #49AA26;
-    --light-green: #3dd705;
+    --color-gray-cards: #363f5f;
+    --color-button-transaction-hover: #3DD705;
+    --color-button-transaction: #46aa26;
+    --background-color-modal: #f0f2f5;
+    --color-white: #ffffff;
+    --color-green: #49AA26;
     --red: #e92929;
 }
 
@@ -13,24 +16,17 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 93.75%;
-    /* 15px */
-}
-
-body {
-    background: #f0f2f5;
-    font-family: 'Poppins', sans-serif
 }
 
 .sr-only {
+    /*Esse Codico mantem visivel para pessoal com deficiencia */
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(0, 0, 0, 0, );
     white-space: nowrap;
     border-width: 0;
 }
@@ -41,51 +37,54 @@ body {
 }
 
 
-/* Titles ===================== */
+/* Titles ========================== */
 
 h2 {
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
-    color: var(--dark-blue);
+    color: var(--color-gray-cards);
     font-weight: normal;
+    text-align: center;
 }
 
 
-/* Links & Buttons ===================== */
+/* Links e Buttuns ================= */
 
 a {
-    color: var(--green);
+    color: var(--color-button-transaction);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--light-green);
+    color: var(--color-button-transaction-hover)
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    margin-top: .8rem;
 }
 
 button {
     width: 100%;
     height: 50px;
     border: none;
-    color: white;
-    background: var(--green);
+    color: var(--color-white);
+    background-color: var(--color-green);
     padding: 0;
     border-radius: 0.25rem;
     cursor: pointer;
 }
 
 button:hover {
-    background: var(--light-green);
-}
-
-.button.new {
-    display: inline-block;
-    margin-bottom: .8rem;
+    background: var(--color-button-transaction-hover);
 }
 
 .button.cancel {
     color: var(--red);
     border: 2px var(--red) solid;
     border-radius: 0.25rem;
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -98,7 +97,7 @@ button:hover {
 }
 
 
-/* Header ===================== */
+/* Header ========================== */
 
 header {
     background: #2D4A22;
@@ -112,26 +111,27 @@ header {
 }
 
 
-/* Balance ===================== */
+/* Balance ========================== */
 
-#balance {
+#Balance {
     margin-top: -8rem;
 }
 
-#balance h2 {
-    color: white;
+#Balance h2 {
+    /*Não coloca como variavel / leitor de tela*/
+    color: #fff;
     margin-top: 0;
 }
 
 
-/* Cards ===================== */
+/* Cards ========================== */
 
 .card {
-    background: white;
+    background: #fff;
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
     margin-bottom: 2rem;
-    color: var(--dark-blue);
+    color: var(--color-gray-cards);
 }
 
 .card h3 {
@@ -139,23 +139,20 @@ header {
     font-size: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     justify-content: space-between;
 }
 
 .card p {
     font-size: 2rem;
     line-height: 3rem;
-    white-space: nowrap;
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .card.total {
-    background: var(--green);
-    color: white;
+    background: var(--color-green);
+    color: #fff
 }
-
-
-/* Table ===================== */
 
 #transaction {
     display: block;
@@ -163,44 +160,43 @@ header {
     overflow-x: auto;
 }
 
+
+/* Table ========================== */
+
 #data-table {
     width: 100%;
-    border-spacing: 0 0.5rem;
+    border-spacing: 0 0.15rem;
     color: #969cb3;
 }
 
-table thead tr th:first-child,
-table tbody tr td:first-child {
-    border-radius: 0.25rem 0 0 0.25rem;
-}
-
-table thead tr th:last-child,
-table tbody tr td:last-child {
-    border-radius: 0 0.25rem 0.25rem 0;
-}
-
-table thead th {
-    background: white;
-    font-weight: normal;
-    padding: 1rem 2rem;
-    text-align: left;
-}
-
 table tbody tr {
-    opacity: 0.7
+    opacity: 0.7;
 }
 
 table tbody tr:hover {
-    opacity: 1
+    opacity: 1;
+    color: #969cd9;
 }
 
-table tbody td {
-    background: white;
+table td {
+    background: #fff;
+    border-radius: 0.30rem;
+    text-align: left;
     padding: 1rem 2rem;
 }
 
-td.description {
-    color: var(--dark-blue);
+table th {
+    background: #fAfAfA;
+    color: #969cb3;
+    font-weight: normal;
+    text-align: left;
+    padding: 1rem 2rem;
+    text-align: 2rem;
+    border-radius: 0.30rem;
+}
+
+td.descripition {
+    color: var(--color-gray-cards);
 }
 
 td.income {
@@ -212,7 +208,7 @@ td.expense {
 }
 
 
-/* Modal ===================== */
+/* Modal ========================== */
 
 .modal-overlay {
     width: 100%;
@@ -225,7 +221,6 @@ td.expense {
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    z-index: 999;
 }
 
 .modal-overlay.active {
@@ -234,14 +229,14 @@ td.expense {
 }
 
 .modal {
-    background: #F0F2f5;
+    background-color: var(--background-color-modal);
     padding: 2.4rem;
-    position: relative;
-    z-index: 1;
+    max-width: 500px;
+    max-height: 380px;
 }
 
 
-/* Form ===================== */
+/* Form ============================ */
 
 #form {
     max-width: 500px;
@@ -251,10 +246,10 @@ td.expense {
     margin-top: 0;
 }
 
-input {
+#form form input {
     border: none;
     border-radius: 0.2rem;
-    padding: 0.8rem;
+    padding: .8rem;
     width: 100%;
 }
 
@@ -262,7 +257,7 @@ input {
     margin-top: 0.8rem;
 }
 
-.input-group .help {
+.input-group small {
     opacity: 0.4;
 }
 
@@ -278,25 +273,26 @@ input {
 }
 
 
-/* Footer ===================== */
+/* Footer ========================== */
 
 footer {
+    margin: 5rem 0 2rem;
     text-align: center;
-    padding: 4rem 0 2rem;
-    color: var(--dark-blue);
+    color: var(--color-gray-cards);
     opacity: 0.6;
 }
 
 
-/* Responsive ===================== */
+/* Reponsive */
 
 @media (min-width: 800px) {
+    /* 14px */
     html {
         font-size: 87.5%;
     }
-    #balance {
+    #Balance {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
     }
 }
